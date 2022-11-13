@@ -113,3 +113,17 @@ To lint your front-end code, use `npm run lint`.
 To test your smart contracts, run `truffle test ./test/greeter-test.js` or `truffle test --show-events  ./test/greeter-test.js`.
 
 A sample test can be found in `test/greeter-test.js`.
+
+## Truffle Console
+To test your smart contracts using by manual interaction, run `truffle console` after deploying the smart contract using `truffle migrate`.
+For detailed documentation, visit [Truffle Console](https://www.trufflesuite.com/docs/truffle/getting-started/using-truffle-develop-and-the-console).
+Some commands to get you started:
+- `let instance = await Greeter.deployed()`
+- `let accounts = await web3.eth.getAccounts()`
+- `let balance = await instance.getBalance(accounts[0])`
+- `balance.toNumber()`
+- `let greeting = await instance.greet()`
+- `greeting.toString()`
+- `await instance.setGreeting("Hello world!")`
+- `let greeting = await instance.greet()`
+- `.exit`
